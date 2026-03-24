@@ -1,0 +1,207 @@
+[
+  {
+    "match": "Alpha Squad",
+    "rater_user": "komanijola@gmail.com",
+    "rated_user": "komanieni@gmail.com",
+    "score": 8
+  },
+  {
+    "match": "Alpha Squad",
+    "rater_user": "komanijola@gmail.com",
+    "rated_user": "tafilaela@gmail.com",
+    "score": 7
+  },
+  {
+    "match": "Alpha Squad",
+    "rater_user": "komanieni@gmail.com",
+    "rated_user": "komanijola@gmail.com",
+    "score": 9
+  },
+  {
+    "match": "Alpha Squad",
+    "rater_user": "komanieni@gmail.com",
+    "rated_user": "tafilaela@gmail.com",
+    "score": 8
+  },
+  {
+    "match": "Alpha Squad",
+    "rater_user": "tafilaela@gmail.com",
+    "rated_user": "komanijola@gmail.com",
+    "score": 9
+  },
+  {
+    "match": "Alpha Squad",
+    "rater_user": "tafilaela@gmail.com",
+    "rated_user": "komanieni@gmail.com",
+    "score": 7
+  },
+  {
+    "match": "Alpha Squad",
+    "rater_user": "player4@test.com",
+    "rated_user": "player5@test.com",
+    "score": 8
+  },
+  {
+    "match": "Alpha Squad",
+    "rater_user": "player4@test.com",
+    "rated_user": "player6@test.com",
+    "score": 7
+  },
+  {
+    "match": "Alpha Squad",
+    "rater_user": "player5@test.com",
+    "rated_user": "player4@test.com",
+    "score": 9
+  },
+  {
+    "match": "Alpha Squad",
+    "rater_user": "player5@test.com",
+    "rated_user": "player6@test.com",
+    "score": 8
+  },
+  {
+    "match": "Alpha Squad",
+    "rater_user": "player6@test.com",
+    "rated_user": "player4@test.com",
+    "score": 7
+  },
+  {
+    "match": "Alpha Squad",
+    "rater_user": "player6@test.com",
+    "rated_user": "player5@test.com",
+    "score": 8
+  },
+  {
+    "match": "Alpha Squad",
+    "rater_user": "player6@test.com",
+    "rated_user": "player7@test.com",
+    "score": 8
+  },
+  {
+    "match": "Alpha Squad",
+    "rater_user": "player4@test.com",
+    "rated_user": "player8@test.com",
+    "score": 5
+  },
+  {
+    "match": "Alpha Squad",
+    "rater_user": "player6@test.com",
+    "rated_user": "player9@test.com",
+    "score": 8
+  },
+  {
+    "match": "Alpha Squad",
+    "rater_user": "player4@test.com",
+    "rated_user": "player10@test.com",
+    "score": 2
+  },
+  {
+    "match": "Alpha Squad",
+    "rater_user": "player6@test.com",
+    "rated_user": "player11@test.com",
+    "score": 8
+  },
+  {
+    "match": "Alpha Squad",
+    "rater_user": "player15@test.com",
+    "rated_user": "player12@test.com",
+    "score": 9
+  },
+
+  {
+    "match": "Beta Squad",
+    "rater_user": "komanieni@gmail.com",
+    "rated_user": "komanijola@gmail.com",
+    "score": 8
+  },
+  {
+    "match": "Beta Squad",
+    "rater_user": "komanieni@gmail.com",
+    "rated_user": "tafilaela@gmail.com",
+    "score": 9
+  },
+  {
+    "match": "Beta Squad",
+    "rater_user": "komanijola@gmail.com",
+    "rated_user": "komanieni@gmail.com",
+    "score": 7
+  },
+  {
+    "match": "Beta Squad",
+    "rater_user": "komanijola@gmail.com",
+    "rated_user": "tafilaela@gmail.com",
+    "score": 8
+  },
+  {
+    "match": "Beta Squad",
+    "rater_user": "tafilaela@gmail.com",
+    "rated_user": "komanijola@gmail.com",
+    "score": 8
+  },
+  {
+    "match": "Beta Squad",
+    "rater_user": "tafilaela@gmail.com",
+    "rated_user": "komanieni@gmail.com",
+    "score": 7
+  },
+  {
+    "match": "Beta Squad",
+    "rater_user": "player7@test.com",
+    "rated_user": "player8@test.com",
+    "score": 8
+  },
+  {
+    "match": "Beta Squad",
+    "rater_user": "player7@test.com",
+    "rated_user": "player9@test.com",
+    "score": 7
+  },
+  {
+    "match": "Beta Squad",
+    "rater_user": "player8@test.com",
+    "rated_user": "player7@test.com",
+    "score": 9
+  },
+  {
+    "match": "Beta Squad",
+    "rater_user": "player8@test.com",
+    "rated_user": "player9@test.com",
+    "score": 8
+  },
+  {
+    "match": "Beta Squad",
+    "rater_user": "player9@test.com",
+    "rated_user": "player10@test.com",
+    "score": 9
+  },
+  {
+    "match": "Beta Squad",
+    "rater_user": "player10@test.com",
+    "rated_user": "player11@test.com",
+    "score": 5
+  },
+  {
+    "match": "Beta Squad",
+    "rater_user": "player8@test.com",
+    "rated_user": "player12@test.com",
+    "score": 7
+  },
+  {
+    "match": "Beta Squad",
+    "rater_user": "player7@test.com",
+    "rated_user": "player13@test.com",
+    "score": 3
+  },
+  {
+    "match": "Beta Squad",
+    "rater_user": "player4@test.com",
+    "rated_user": "player14@test.com",
+    "score": 8
+  },
+  {
+    "match": "Beta Squad",
+    "rater_user": "player5@test.com",
+    "rated_user": "player15@test.com",
+    "score": 10
+  }
+]

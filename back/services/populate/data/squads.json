@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Alpha Squad",
+    "is_public": true,
+    "admins": ["komanijola@gmail.com"],
+    "members": [
+      "komanijola@gmail.com",
+      "komanieni@gmail.com",
+      "tafilaela@gmail.com",
+      "player4@test.com",
+      "player5@test.com",
+      "player6@test.com",
+      "player7@test.com",
+      "player8@test.com",
+      "player9@test.com",
+      "player10@test.com",
+      "player11@test.com",
+      "player12@test.com"
+    ]
+  },
+  {
+    "name": "Beta Squad",
+    "is_public": false,
+    "admins": ["komanieni@gmail.com"],
+    "members": [
+      "komanijola@gmail.com",
+      "komanieni@gmail.com",
+      "tafilaela@gmail.com",
+      "player7@test.com",
+      "player8@test.com",
+      "player9@test.com",
+      "player10@test.com",
+      "player11@test.com",
+      "player12@test.com",
+      "player13@test.com",
+      "player14@test.com",
+      "player15@test.com"
+    ]
+  }
+]

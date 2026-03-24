@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport-Zone | {% block title %}Electric Arena{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/common.css' %}">
+    {% block extra_css %}{% endblock %}
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    {% block head_scripts %}{% endblock %}
+</head>
+<body>
+
+    {% block navbar %}
+    {% include 'components/navbar.html' %}
+    {% endblock %}
+
+    {% block content %}{% endblock %}
+
+    {% block footer %}
+    {% include 'components/footer_full.html' %}
+    {% endblock %}
+
+    <script src="{% static 'js/users/auth.js' %}"></script>
+    {% block extra_scripts %}{% endblock %}
+
+</body>
+</html>
+

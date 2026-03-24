@@ -1,0 +1,29 @@
+{% load static %}
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="container">
+        <a href="/" class="logo">
+            <div class="logo-icon">⚡</div>
+            SportZone
+        </a>
+
+        <ul class="nav-links">
+            {% if user.is_authenticated %}
+                <li><a href="/squads/">Squads</a></li>
+                <li><a href="/users/performance/">Performance</a></li>
+            {% endif %}
+            <li><a href="/#players">Rankings</a></li>
+        </ul>
+
+        <div class="nav-actions" id="nav-actions">
+            {% if user.is_authenticated %}
+                <a href="/users/profile/" class="user-name">{{ user.first_name }} {{ user.last_name }}</a>
+                <a href="#" class="btn btn-ghost" onclick="logout()">Log Out</a>
+            {% else %}
+                <a href="/users/login/" class="btn btn-ghost">Log In</a>
+                <a href="/users/create/" class="btn btn-primary">Join Now</a>
+            {% endif %}
+        </div>
+    </div>
+</nav>
+

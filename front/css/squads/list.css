@@ -1,0 +1,615 @@
+/* ============================================
+   SPORT-ZONE Squads Page - "TEAM FORTRESS"
+   Page-specific styles for squad listing
+   ============================================ */
+
+/* ===== SQUADS HEADER ===== */
+.squads-header {
+    position: sticky;
+    top: 128px; /* Below the nav and breadcrumb */
+    z-index: 100;
+    background: var(--bg-dark);
+    border-bottom: 1px solid var(--border-dark);
+    padding: 20px 0;
+    margin-top: 0; /* Breadcrumb handles spacing */
+}
+
+.squads-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.squads-header h1 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.squads-header .btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.squads-header .btn-icon {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+/* ===== SQUADS SECTION ===== */
+.squads-section {
+    padding: 32px 0 80px;
+    padding-top: 180px; /* Account for navbar (88px) + breadcrumb (~76px) + extra spacing */
+    flex: 1;
+}
+
+/* Section Titles */
+.section-title-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+    margin-top: 0;
+    animation: fadeInUp 0.8s ease backwards;
+    position: relative;
+    z-index: 1;
+}
+
+.section-title-row h2 {
+    font-size: 1.5rem;
+    color: var(--text-white);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.section-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+.section-icon.user-icon {
+    background: linear-gradient(135deg, var(--electric-green), var(--neon-blue));
+    box-shadow: var(--glow-green);
+}
+
+.section-icon.other-icon {
+    background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
+    box-shadow: var(--glow-pink);
+}
+
+.section-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--border-dark), transparent);
+}
+
+.squad-count {
+    padding: 6px 14px;
+    background: rgba(147, 51, 234, 0.15);
+    border: 1px solid rgba(147, 51, 234, 0.3);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--neon-purple);
+}
+
+/* Squads Grid */
+.squads-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+/* Squad Card */
+.squad-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-dark);
+    padding: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    animation: fadeInUp 0.6s ease backwards;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.squad-card.clickable {
+    cursor: pointer;
+}
+
+.squad-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.squad-delete-btn {
+    background: transparent;
+    border: 1px solid var(--border-dark);
+    color: var(--text-dim);
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1rem;
+    padding: 0;
+}
+
+.squad-delete-btn:hover {
+    background: rgba(255, 71, 87, 0.1);
+    border-color: var(--error-red);
+    color: var(--error-red);
+    transform: scale(1.1);
+}
+
+.squad-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--neon-purple), var(--neon-pink));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.squad-card:hover {
+    border-color: var(--neon-purple);
+    transform: translateY(-8px);
+    box-shadow: 
+        0 25px 60px rgba(147, 51, 234, 0.2),
+        0 0 40px rgba(147, 51, 234, 0.1);
+}
+
+.squad-card:hover::before {
+    transform: scaleX(1);
+}
+
+.squad-card.user-squad::before {
+    background: linear-gradient(90deg, var(--electric-green), var(--neon-blue));
+}
+
+.squad-card.user-squad:hover {
+    border-color: var(--electric-green);
+    box-shadow: 
+        0 25px 60px rgba(0, 255, 136, 0.2),
+        0 0 40px rgba(0, 255, 136, 0.1);
+}
+
+/* Squad Header */
+.squad-header {
+    padding: 28px 28px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.squad-identity {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.squad-avatar {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    box-shadow: var(--glow-pink);
+    transition: all 0.3s;
+    flex-shrink: 0;
+}
+
+.user-squad .squad-avatar {
+    background: linear-gradient(135deg, var(--electric-green), var(--neon-blue));
+    box-shadow: var(--glow-green);
+}
+
+.squad-card:hover .squad-avatar {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.squad-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.squad-info-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.squad-id {
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.squad-visibility {
+    font-size: 0.7rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.squad-visibility.public {
+    color: var(--electric-green);
+    background: rgba(0, 255, 136, 0.1);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+.squad-visibility.private {
+    color: var(--neon-pink);
+    background: rgba(255, 107, 53, 0.1);
+    border: 1px solid rgba(255, 107, 53, 0.3);
+}
+
+.squad-name {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.squad-badge {
+    padding: 6px 14px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    align-self: flex-start;
+}
+
+.squad-badge.your-squad {
+    background: rgba(0, 255, 136, 0.15);
+    border: 1px solid rgba(0, 255, 136, 0.4);
+    color: var(--electric-green);
+}
+
+/* Players Section */
+.squad-players {
+    padding: 0 28px 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.players-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    color: var(--text-white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+}
+
+.players-label-icon {
+    font-size: 1rem;
+    filter: brightness(1.3);
+}
+
+.players-label-icon {
+    font-size: 0.9rem;
+}
+
+.players-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 160px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.players-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.players-list::-webkit-scrollbar-track {
+    background: var(--bg-elevated);
+}
+
+.players-list::-webkit-scrollbar-thumb {
+    background: var(--border-dark);
+    border-radius: 2px;
+}
+
+.player-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-dark);
+    transition: all 0.2s;
+}
+
+.player-item:hover {
+    border-color: var(--neon-purple);
+    background: rgba(147, 51, 234, 0.05);
+}
+
+.user-squad .player-item:hover {
+    border-color: var(--electric-green);
+    background: rgba(0, 255, 136, 0.05);
+}
+
+.player-avatar {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated));
+    border: 1px solid var(--border-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    color: var(--text-gray);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+}
+
+.player-name {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-white);
+    flex: 1;
+}
+
+.player-status {
+    width: 8px;
+    height: 8px;
+    background: var(--electric-green);
+    border-radius: 50%;
+    box-shadow: var(--glow-green);
+    animation: pulse 2s infinite;
+}
+
+/* Empty Players */
+.empty-players {
+    padding: 24px;
+    text-align: center;
+    background: var(--bg-elevated);
+    border: 1px dashed var(--border-dark);
+}
+
+.empty-players-icon {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    opacity: 0.6;
+}
+
+.empty-players-text {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+}
+
+/* Squad Footer */
+.squad-footer {
+    padding: 16px 28px;
+    background: var(--bg-elevated);
+    border-top: 1px solid var(--border-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.squad-stat {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.squad-stat-icon {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.squad-stat-value {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-white);
+}
+
+.squad-stat-label {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.squad-actions {
+    padding: 20px 28px;
+    background: var(--bg-elevated);
+    border-top: 1px solid var(--border-dark);
+    display: flex;
+    gap: 12px;
+    margin-top: auto;
+    justify-content: center;
+}
+
+.squad-actions .btn {
+    font-size: 0.85rem;
+    padding: 10px 20px;
+    flex: 1;
+    max-width: 150px;
+}
+
+/* ===== LOADING STATE ===== */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 0;
+}
+
+.loading-spinner {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 24px;
+}
+
+.spinner-ring {
+    position: absolute;
+    inset: 0;
+    border: 3px solid transparent;
+    border-top-color: var(--neon-purple);
+    border-radius: 50%;
+    animation: spin 1.2s linear infinite;
+}
+
+.spinner-ring:nth-child(2) {
+    inset: 8px;
+    border-top-color: var(--neon-pink);
+    animation-duration: 1s;
+    animation-direction: reverse;
+}
+
+.spinner-ring:nth-child(3) {
+    inset: 16px;
+    border-top-color: var(--electric-green);
+    animation-duration: 0.8s;
+}
+
+.loading-text {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: pulse 1.5s infinite;
+}
+
+/* ===== EMPTY STATE ===== */
+.empty-state,
+.error-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 40px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-dark);
+    text-align: center;
+}
+
+.empty-section {
+    padding: 60px 40px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-dark);
+    border-radius: 0.75rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.empty-section-text {
+    font-size: 0.95rem;
+    color: var(--text-gray);
+    font-family: 'Exo 2', sans-serif;
+}
+
+.empty-icon,
+.error-icon {
+    font-size: 4rem;
+    margin-bottom: 24px;
+    opacity: 0.7;
+}
+
+.empty-state h3,
+.error-state h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.empty-state p,
+.error-state p {
+    color: var(--text-gray);
+    max-width: 400px;
+    margin-bottom: 32px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+    .squads-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .squads-header {
+        top: 70px;
+        margin-top: 70px;
+        padding: 16px 0;
+    }
+
+    .squads-header h1 {
+        font-size: 1.4rem;
+    }
+
+    .squads-header .btn {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+    }
+
+    .squads-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title-row h2 {
+        font-size: 1.2rem;
+    }
+
+    .squad-header {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .squad-badge {
+        align-self: flex-start;
+    }
+}

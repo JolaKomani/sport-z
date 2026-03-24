@@ -1,0 +1,86 @@
+/* ============================================
+   SPORT-ZONE User Login - "ELECTRIC ARENA"
+   Page-specific styles only (common styles in common.css)
+   ============================================ */
+
+/* ===== LOGIN PAGE ===== */
+.login-page {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.login-section {
+    padding: 140px 0 60px;
+    width: 100%;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    animation: fadeIn 0.6s ease;
+}
+
+/* Form Card */
+.form-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-dark);
+    padding: 48px;
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+}
+
+.form-card::before,
+.form-card::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--neon-blue);
+    opacity: 0.6;
+}
+
+.form-card::before {
+    top: -1px;
+    left: -1px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.form-card::after {
+    bottom: -1px;
+    right: -1px;
+    border-left: none;
+    border-top: none;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.form-header h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.form-header p {
+    color: var(--text-gray);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .form-card {
+        padding: 32px 24px;
+    }
+
+    .form-header h1 {
+        font-size: 1.6rem;
+    }
+}

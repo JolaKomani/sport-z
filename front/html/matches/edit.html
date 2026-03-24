@@ -1,0 +1,16 @@
+{% extends 'base_react.html' %}
+{% load static %}
+
+{% block title %}Edit Match{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/matches/edit.css' %}">
+{% endblock %}
+
+{% block footer %}
+{% include 'components/footer_full.html' %}
+{% endblock %}
+
+{% block extra_scripts %}
+<script type="text/babel" src="{% static 'js/matches/edit.js' %}"></script>
+{% endblock %}

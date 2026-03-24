@@ -1,0 +1,295 @@
+/* ============================================
+   SPORT-ZONE User Performance Page
+   Styles for user performance statistics page
+   ============================================ */
+
+.performance-page {
+    min-height: 100vh;
+    padding: 140px 0 80px;
+    background: var(--bg-primary);
+}
+
+.performance-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Page Header */
+.performance-header {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: fadeInUp 0.8s ease;
+}
+
+.performance-header h1 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--text-white);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, var(--neon-blue), var(--neon-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.performance-header p {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+}
+
+/* Stats Cards */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+    margin-bottom: 60px;
+}
+
+.stat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-dark);
+    padding: 20px 16px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.8s ease backwards;
+}
+
+.stat-card:nth-child(1) { animation-delay: 0.1s; }
+.stat-card:nth-child(2) { animation-delay: 0.2s; }
+.stat-card:nth-child(3) { animation-delay: 0.3s; }
+.stat-card:nth-child(4) { animation-delay: 0.4s; }
+.stat-card:nth-child(5) { animation-delay: 0.5s; }
+.stat-card:nth-child(6) { animation-delay: 0.6s; }
+
+.stat-card:hover {
+    border-color: var(--neon-blue);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 40px rgba(0, 212, 255, 0.1);
+}
+
+.stat-icon {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.stat-value {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 4px;
+    background: linear-gradient(135deg, var(--neon-blue), var(--neon-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--text-gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+/* Charts Section */
+.charts-section {
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.section-title-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--neon-blue), var(--neon-pink));
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 32px;
+    margin-bottom: 40px;
+}
+
+.chart-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-dark);
+    padding: 32px;
+    border-radius: 12px;
+    animation: fadeInUp 0.8s ease backwards;
+}
+
+.chart-card:nth-child(1) { animation-delay: 0.4s; }
+.chart-card:nth-child(2) { animation-delay: 0.5s; }
+.chart-card:nth-child(3) { animation-delay: 0.6s; }
+
+.chart-card:hover {
+    border-color: var(--neon-blue);
+    box-shadow: 0 10px 40px rgba(0, 212, 255, 0.1);
+}
+
+.chart-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+/* Loading State */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 0;
+}
+
+.loading-spinner {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 24px;
+}
+
+.spinner-ring {
+    position: absolute;
+    inset: 0;
+    border: 3px solid transparent;
+    border-top-color: var(--neon-blue);
+    border-radius: 50%;
+    animation: spin 1.2s linear infinite;
+}
+
+.spinner-ring:nth-child(2) {
+    inset: 8px;
+    border-top-color: var(--neon-pink);
+    animation-duration: 1s;
+    animation-direction: reverse;
+}
+
+.spinner-ring:nth-child(3) {
+    inset: 16px;
+    border-top-color: var(--electric-green);
+    animation-duration: 0.8s;
+}
+
+.loading-text {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: pulse 1.5s infinite;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-dark);
+    border-radius: 12px;
+}
+
+.empty-icon {
+    font-size: 4rem;
+    margin-bottom: 24px;
+    opacity: 0.6;
+}
+
+.empty-state h3 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.5rem;
+    color: var(--text-white);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.empty-state p {
+    color: var(--text-gray);
+    font-size: 1rem;
+}
+
+/* Error State */
+.error-state {
+    text-align: center;
+    padding: 80px 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-dark);
+    border-radius: 12px;
+}
+
+.error-icon {
+    font-size: 4rem;
+    margin-bottom: 24px;
+    opacity: 0.7;
+}
+
+.error-state h3 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.5rem;
+    color: var(--text-white);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.error-state p {
+    color: var(--text-gray);
+    font-size: 1rem;
+    margin-bottom: 24px;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .performance-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chart-container {
+        height: 250px;
+    }
+}

@@ -1,0 +1,16 @@
+{% extends 'base_react.html' %}
+{% load static %}
+
+{% block title %}Squads{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/squads/list.css' %}">
+{% endblock %}
+
+{% block footer %}
+{% include 'components/footer_full.html' %}
+{% endblock %}
+
+{% block extra_scripts %}
+<script type="text/babel" src="{% static 'js/squads/list.js' %}"></script>
+{% endblock %}

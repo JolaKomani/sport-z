@@ -1,0 +1,107 @@
+[
+  {
+    "email": "komanijola@gmail.com",
+    "phone": "04555465",
+    "first_name": "Jola",
+    "last_name": "Komani",
+    "password": "12345678"
+  },
+  {
+    "email": "komanieni@gmail.com",
+    "phone": "04555466",
+    "first_name": "Eni",
+    "last_name": "Komani",
+    "password": "12345678"
+  },
+  {
+    "email": "tafilaela@gmail.com",
+    "phone": "04555467",
+    "first_name": "Ela",
+    "last_name": "Tafila",
+    "password": "12345678"
+  },
+  {
+    "email": "player4@test.com",
+    "phone": "04555468",
+    "first_name": "Arben",
+    "last_name": "Hoxha",
+    "password": "12345678"
+  },
+  {
+    "email": "player5@test.com",
+    "phone": "04555469",
+    "first_name": "Besnik",
+    "last_name": "Krasniqi",
+    "password": "12345678"
+  },
+  {
+    "email": "player6@test.com",
+    "phone": "04555470",
+    "first_name": "Ilir",
+    "last_name": "Gashi",
+    "password": "12345678"
+  },
+  {
+    "email": "player7@test.com",
+    "phone": "04555471",
+    "first_name": "Mentor",
+    "last_name": "Berisha",
+    "password": "12345678"
+  },
+  {
+    "email": "player8@test.com",
+    "phone": "04555472",
+    "first_name": "Alban",
+    "last_name": "Rama",
+    "password": "12345678"
+  },
+  {
+    "email": "player9@test.com",
+    "phone": "04555473",
+    "first_name": "Driton",
+    "last_name": "Shala",
+    "password": "12345678"
+  },
+  {
+    "email": "player10@test.com",
+    "phone": "04555474",
+    "first_name": "Valon",
+    "last_name": "Musa",
+    "password": "12345678"
+  },
+  {
+    "email": "player11@test.com",
+    "phone": "04555475",
+    "first_name": "Erion",
+    "last_name": "Bytyqi",
+    "password": "12345678"
+  },
+  {
+    "email": "player12@test.com",
+    "phone": "04555476",
+    "first_name": "Luan",
+    "last_name": "Kelmendi",
+    "password": "12345678"
+  },
+  {
+    "email": "player13@test.com",
+    "phone": "04555477",
+    "first_name": "Blerim",
+    "last_name": "Morina",
+    "password": "12345678"
+  },
+  {
+    "email": "player14@test.com",
+    "phone": "04555478",
+    "first_name": "Jeton",
+    "last_name": "Sadiku",
+    "password": "12345678"
+  },
+  {
+    "email": "player15@test.com",
+    "phone": "04555479",
+    "first_name": "Florin",
+    "last_name": "Ismaili",
+    "password": "12345678"
+  }
+]

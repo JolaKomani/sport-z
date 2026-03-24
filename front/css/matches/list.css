@@ -1,0 +1,529 @@
+/* ============================================
+   SPORT-ZONE Matches Page - "ELECTRIC ARENA"
+   Page-specific styles only (common styles in common.css)
+   ============================================ */
+
+/* ===== MATCHES HEADER ===== */
+.matches-header {
+    position: sticky;
+    top: 128px; /* Below the nav and breadcrumb */
+    z-index: 100;
+    background: var(--bg-dark);
+    border-bottom: 1px solid var(--border-dark);
+    padding: 20px 0;
+    margin-top: 0; /* Breadcrumb handles spacing */
+}
+
+.matches-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.matches-header h1 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.matches-header .btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.matches-header .btn-icon {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+/* ===== MATCHES SECTION ===== */
+.matches-section {
+    padding: 32px 0 80px;
+    padding-top: 180px; /* Account for navbar (88px) + breadcrumb (~76px) + extra spacing */
+    flex: 1;
+}
+
+/* Matches Grid */
+.matches-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* Match Card */
+.match-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-dark);
+    padding: 28px;
+    transition: all 0.3s;
+    position: relative;
+    animation: fadeInUp 0.6s ease backwards;
+    min-width: 0;
+    overflow: hidden;
+    text-align: left;
+}
+
+.match-card.clickable {
+    cursor: pointer;
+}
+
+.match-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.match-card:hover {
+    border-color: var(--neon-blue);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(0, 212, 255, 0.15);
+}
+
+.match-card:hover::before {
+    transform: scaleX(1);
+}
+
+.match-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.match-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.match-delete-btn {
+    background: transparent;
+    border: 1px solid var(--border-dark);
+    color: var(--text-dim);
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1rem;
+    padding: 0;
+}
+
+.match-delete-btn:hover {
+    background: rgba(255, 71, 87, 0.1);
+    border-color: var(--error-red);
+    color: var(--error-red);
+    transform: scale(1.1);
+}
+
+.match-id {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.match-id-label {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.match-id-value {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--neon-blue);
+}
+
+.match-status {
+    padding: 6px 14px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.match-status.open {
+    background: rgba(0, 255, 136, 0.15);
+    border: 1px solid rgba(0, 255, 136, 0.4);
+    color: var(--electric-green);
+}
+
+.match-status.full {
+    background: rgba(255, 0, 170, 0.15);
+    border: 1px solid rgba(255, 0, 170, 0.4);
+    color: var(--neon-pink);
+}
+
+/* Match Squad Display */
+.match-squad-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-dark);
+    border-radius: 4px;
+}
+
+.squad-icon {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.squad-name {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Match Content Section */
+.match-content {
+    margin-top: 20px;
+}
+
+/* Teams & Score Section */
+.match-teams-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, rgba(255, 0, 170, 0.05) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+}
+
+.team-card-compact {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+.team-name-compact {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.team-score-badge {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--electric-green);
+    background: rgba(0, 255, 136, 0.1);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    padding: 4px 10px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.vs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    padding: 0 12px;
+}
+
+.vs-divider {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--neon-pink);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+.score-display {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.score-value {
+    color: var(--electric-green);
+    min-width: 24px;
+    text-align: center;
+}
+
+.score-separator {
+    color: var(--text-dim);
+    opacity: 0.5;
+}
+
+/* Match Details Section */
+.match-details-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-dark);
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-dark);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.detail-item:hover {
+    border-color: rgba(0, 212, 255, 0.3);
+    background: rgba(0, 212, 255, 0.03);
+}
+
+.detail-icon {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.detail-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.detail-label {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.detail-value {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-white);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.4;
+}
+
+/* Allow location (first detail item) to wrap to 2 lines */
+.detail-item:first-child .detail-value {
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 2.8em; /* Approximately 2 lines */
+}
+
+.info-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.info-item.arena {
+    opacity: 0.7;
+}
+
+.info-icon {
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+.info-text {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-white);
+    white-space: nowrap;
+    display: inline;
+}
+
+.info-separator {
+    color: var(--text-dim);
+    opacity: 0.5;
+    font-size: 0.75rem;
+}
+
+/* Match Actions */
+.match-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.match-actions .btn {
+    flex: 1;
+}
+
+/* ===== LOADING STATE ===== */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 0;
+}
+
+.loading-spinner {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 24px;
+}
+
+.spinner-ring {
+    position: absolute;
+    inset: 0;
+    border: 3px solid transparent;
+    border-top-color: var(--neon-blue);
+    border-radius: 50%;
+    animation: spin 1.2s linear infinite;
+}
+
+.spinner-ring:nth-child(2) {
+    inset: 8px;
+    border-top-color: var(--neon-pink);
+    animation-duration: 1s;
+    animation-direction: reverse;
+}
+
+.spinner-ring:nth-child(3) {
+    inset: 16px;
+    border-top-color: var(--electric-green);
+    animation-duration: 0.8s;
+}
+
+.loading-text {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: pulse 1.5s infinite;
+}
+
+/* ===== EMPTY STATE ===== */
+.empty-state,
+.error-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 40px;
+    margin-top: 40px; /* Extra spacing to avoid breadcrumb overlap */
+    background: var(--bg-card);
+    border: 1px solid var(--border-dark);
+    text-align: center;
+}
+
+.empty-icon,
+.error-icon {
+    font-size: 4rem;
+    margin-bottom: 24px;
+    opacity: 0.7;
+}
+
+.empty-state h3,
+.error-state h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.empty-state p,
+.error-state p {
+    color: var(--text-gray);
+    max-width: 400px;
+    margin-bottom: 32px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .matches-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .matches-header {
+        top: 70px;
+        margin-top: 70px;
+        padding: 16px 0;
+    }
+
+    .matches-header h1 {
+        font-size: 1.4rem;
+    }
+
+    .matches-header .btn {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+    }
+
+    .matches-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .match-teams-section {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .vs-container {
+        padding: 8px 0;
+    }
+
+    .match-details-section {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .detail-item {
+        padding: 10px;
+    }
+}

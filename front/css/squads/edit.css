@@ -1,0 +1,728 @@
+/* ============================================
+   SPORT-ZONE Squad Edit Page
+   Page-specific styles for squad editing
+   ============================================ */
+
+/* ===== PAGE LAYOUT ===== */
+.edit-squad-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== PAGE HERO ===== */
+.page-hero {
+    padding: 140px 0 40px;
+    position: relative;
+}
+
+.page-hero .hero-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s ease;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 20px;
+    background: rgba(147, 51, 234, 0.15);
+    border: 1px solid rgba(147, 51, 234, 0.4);
+    margin-bottom: 24px;
+    font-size: 0.85rem;
+    color: var(--neon-purple);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-icon {
+    font-size: 1rem;
+}
+
+.page-hero h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, var(--text-white) 0%, var(--text-gray) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ===== EDIT FORM SECTION ===== */
+.edit-section {
+    padding: 20px 0 80px;
+    flex: 1;
+}
+
+.edit-form-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Form Card */
+.form-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-dark);
+    padding: 48px;
+    position: relative;
+    animation: fadeInUp 0.8s ease 0.2s backwards;
+}
+
+.form-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--neon-purple), var(--neon-pink));
+}
+
+/* Section Headers in Form */
+.form-section {
+    margin-bottom: 36px;
+}
+
+.form-section:last-of-type {
+    margin-bottom: 0;
+}
+
+.form-section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-dark);
+}
+
+.form-section-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.form-section-icon.add-icon {
+    background: linear-gradient(135deg, var(--electric-green), var(--neon-blue));
+}
+
+.form-section-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-section-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    margin-left: auto;
+}
+
+.optional-badge {
+    color: var(--text-dim);
+}
+
+/* Squad Name Input */
+.squad-name-input {
+    width: 100%;
+    padding: 18px 24px;
+    background: var(--bg-elevated);
+    border: 2px solid var(--border-dark);
+    color: var(--text-white);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s;
+}
+
+.squad-name-input::placeholder {
+    color: var(--text-dim);
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 400;
+}
+
+.squad-name-input:focus {
+    outline: none;
+    border-color: var(--neon-purple);
+    box-shadow: 0 0 30px rgba(147, 51, 234, 0.15);
+}
+
+.squad-name-input.error {
+    border-color: var(--error-red);
+}
+
+.form-error {
+    color: var(--error-red);
+    margin-top: 8px;
+    display: block;
+    font-size: 0.9rem;
+}
+
+/* ===== CURRENT PLAYERS SECTION ===== */
+.current-players-section {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-dark);
+    padding: 24px;
+}
+
+.existing-players-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.existing-player-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-dark);
+    transition: all 0.3s;
+    min-height: 60px;
+    height: 100%;
+}
+
+.existing-player-card:hover {
+    border-color: var(--neon-purple);
+}
+
+.existing-player-card.removing {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.player-avatar-small {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    color: var(--text-white);
+}
+
+.existing-player-card .player-name {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-white);
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.remove-player-btn {
+    width: 28px;
+    height: 28px;
+    background: transparent;
+    border: 1px solid var(--border-dark);
+    color: var(--text-dim);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.remove-player-btn:hover {
+    border-color: var(--error-red);
+    color: var(--error-red);
+    background: rgba(255, 71, 87, 0.1);
+}
+
+/* ===== ADD PLAYERS SECTION ===== */
+.players-input-section {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-dark);
+    padding: 24px;
+}
+
+.players-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.players-count {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-gray);
+}
+
+.players-count-value {
+    color: var(--electric-green);
+    font-weight: 700;
+}
+
+.add-player-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid var(--electric-green);
+    color: var(--electric-green);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.add-player-btn:hover {
+    background: rgba(0, 255, 136, 0.1);
+    box-shadow: var(--glow-green);
+}
+
+.add-player-btn .btn-icon {
+    font-size: 1rem;
+}
+
+/* Email Inputs List */
+.email-inputs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 240px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.email-inputs-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.email-inputs-list::-webkit-scrollbar-track {
+    background: var(--bg-card);
+}
+
+.email-inputs-list::-webkit-scrollbar-thumb {
+    background: var(--border-dark);
+    border-radius: 2px;
+}
+
+/* Email Input Row */
+.email-input-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: slideIn 0.3s ease;
+}
+
+.email-input-number {
+    width: 32px;
+    height: 32px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-dim);
+    flex-shrink: 0;
+}
+
+.email-input-wrapper {
+    flex: 1;
+    position: relative;
+}
+
+.email-input-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    opacity: 0.5;
+}
+
+.email-input {
+    width: 100%;
+    padding: 14px 18px 14px 44px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-dark);
+    color: var(--text-white);
+    font-family: 'Exo 2', sans-serif;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+}
+
+.email-input::placeholder {
+    color: var(--text-dim);
+}
+
+.email-input:focus {
+    outline: none;
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);
+}
+
+.email-input.error {
+    border-color: var(--error-red);
+}
+
+.email-input.valid {
+    border-color: var(--electric-green);
+}
+
+.remove-email-btn {
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: 1px solid var(--border-dark);
+    color: var(--text-dim);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    flex-shrink: 0;
+}
+
+.remove-email-btn:hover {
+    border-color: var(--error-red);
+    color: var(--error-red);
+    background: rgba(255, 71, 87, 0.1);
+}
+
+/* Empty Players Hint */
+.empty-players-hint {
+    text-align: center;
+    padding: 32px 20px;
+    color: var(--text-dim);
+}
+
+.empty-players-hint-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    opacity: 0.6;
+}
+
+.empty-players-hint-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ===== FORM ACTIONS ===== */
+.form-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border-dark);
+}
+
+.form-actions .btn {
+    flex: 1;
+}
+
+.btn-cancel {
+    background: transparent;
+    border: 1px solid var(--border-dark);
+    color: var(--text-gray);
+}
+
+.btn-cancel:hover {
+    border-color: var(--text-gray);
+    color: var(--text-white);
+}
+
+/* ===== SERVER ERROR ===== */
+.server-error {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    background: rgba(255, 71, 87, 0.1);
+    border: 1px solid rgba(255, 71, 87, 0.3);
+    color: var(--error-red);
+    margin-bottom: 24px;
+    font-size: 0.95rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.server-error .error-icon {
+    font-size: 1.2rem;
+}
+
+/* ===== SUCCESS MESSAGE ===== */
+.success-message {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    background: rgba(0, 255, 136, 0.1);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    color: var(--electric-green);
+    margin-bottom: 24px;
+    font-size: 0.95rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.success-message .success-icon {
+    font-size: 1.2rem;
+}
+
+/* ===== LOADING STATES ===== */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 0;
+}
+
+.loading-spinner {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 24px;
+}
+
+.spinner-ring {
+    position: absolute;
+    inset: 0;
+    border: 3px solid transparent;
+    border-top-color: var(--neon-purple);
+    border-radius: 50%;
+    animation: spin 1.2s linear infinite;
+}
+
+.spinner-ring:nth-child(2) {
+    inset: 8px;
+    border-top-color: var(--neon-pink);
+    animation-duration: 1s;
+    animation-direction: reverse;
+}
+
+.spinner-ring:nth-child(3) {
+    inset: 16px;
+    border-top-color: var(--electric-green);
+    animation-duration: 0.8s;
+}
+
+.loading-text {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: pulse 1.5s infinite;
+}
+
+/* ===== LOADING OVERLAY ===== */
+.loading-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(3, 7, 18, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    animation: fadeIn 0.3s ease;
+}
+
+.loading-content {
+    text-align: center;
+}
+
+.loading-spinner-large {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 32px;
+}
+
+.loading-spinner-large .spinner-ring {
+    position: absolute;
+    inset: 0;
+    border: 4px solid transparent;
+    border-top-color: var(--neon-purple);
+    border-radius: 50%;
+    animation: spin 1.2s linear infinite;
+}
+
+.loading-spinner-large .spinner-ring:nth-child(2) {
+    inset: 12px;
+    border-top-color: var(--neon-pink);
+    animation-duration: 1s;
+    animation-direction: reverse;
+}
+
+.loading-spinner-large .spinner-ring:nth-child(3) {
+    inset: 24px;
+    border-top-color: var(--electric-green);
+    animation-duration: 0.8s;
+}
+
+.loading-subtext {
+    font-size: 0.95rem;
+    color: var(--text-gray);
+}
+
+/* ===== ERROR STATE ===== */
+.error-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 40px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-dark);
+    text-align: center;
+}
+
+.error-icon {
+    font-size: 4rem;
+    margin-bottom: 24px;
+    opacity: 0.7;
+}
+
+.error-state h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.error-state p {
+    color: var(--text-gray);
+    max-width: 400px;
+    margin-bottom: 32px;
+}
+
+/* Visibility Radio Options */
+.visibility-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-dark);
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.radio-option:hover {
+    border-color: var(--neon-purple);
+    background: rgba(147, 51, 234, 0.05);
+}
+
+.radio-option input[type="radio"] {
+    margin-top: 2px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--electric-green);
+    flex-shrink: 0;
+}
+
+.radio-option input[type="radio"]:checked {
+    accent-color: var(--electric-green);
+}
+
+.radio-option:has(input[type="radio"]:checked) {
+    border-color: var(--electric-green);
+    background: rgba(0, 255, 136, 0.05);
+}
+
+.radio-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.radio-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.radio-description {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    line-height: 1.5;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .page-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .form-card {
+        padding: 32px 24px;
+    }
+
+    .squad-name-input {
+        font-size: 1.1rem;
+        padding: 16px 20px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .email-input-row {
+        flex-wrap: wrap;
+    }
+
+    .email-input-number {
+        display: none;
+    }
+
+    .email-input-wrapper {
+        flex: 1 1 calc(100% - 48px);
+    }
+
+    .existing-players-list {
+        grid-template-columns: 1fr;
+    }
+
+    .existing-player-card {
+        width: 100%;
+        min-height: 56px;
+    }
+}

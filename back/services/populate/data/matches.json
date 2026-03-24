@@ -1,0 +1,192 @@
+[
+  {
+    "squad": "Alpha Squad",
+    "matches": [
+      {
+        "location": "Prishtina Stadium",
+        "datetime": "2026-01-20T18:30:00",
+        "teams": [
+          {
+            "name": "Alpha Team A",
+            "score": 10,
+            "players": [
+              "komanijola@gmail.com",
+              "komanieni@gmail.com",
+              "tafilaela@gmail.com",
+              "player4@test.com",
+              "player5@test.com",
+              "player6@test.com"
+            ]
+          },
+          {
+            "name": "Alpha Team B",
+            "score": 2,
+            "players": [
+              "player7@test.com",
+              "player8@test.com",
+              "player9@test.com",
+              "player10@test.com",
+              "player11@test.com",
+              "player12@test.com"
+            ]
+          }
+        ]
+      },
+      {
+        "location": "Fadil Vokrri",
+        "datetime": "2026-01-22T19:00:00",
+        "teams": [
+          {
+            "name": "Alpha Team C",
+            "score": 10,
+            "players": [
+              "komanijola@gmail.com",
+              "komanieni@gmail.com",
+              "tafilaela@gmail.com",
+              "player4@test.com",
+              "player5@test.com",
+              "player6@test.com"
+            ]
+          },
+          {
+            "name": "Alpha Team D",
+            "score": 2,
+            "players": [
+              "player7@test.com",
+              "player8@test.com",
+              "player9@test.com",
+              "player10@test.com",
+              "player11@test.com",
+              "player12@test.com"
+            ]
+          }
+        ]
+      },
+      {
+        "location": "Halla e Sporteve",
+        "datetime": "2026-01-22T17:00:00",
+        "teams": [
+          {
+            "name": "Alpha Team E",
+            "score": 9,
+            "players": [
+              "player7@test.com",
+              "player8@test.com",
+              "player9@test.com",
+              "player10@test.com",
+              "player11@test.com",
+              "player12@test.com"
+            ]
+          },
+          {
+            "name": "Alpha Team F",
+            "score": 8,
+            "players": [
+              "komanijola@gmail.com",
+              "komanieni@gmail.com",
+              "tafilaela@gmail.com",
+              "player4@test.com",
+              "player5@test.com",
+              "player6@test.com"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "squad": "Beta Squad",
+    "matches": [
+      {
+        "location": "National Stadium",
+        "datetime": "2026-01-21T18:00:00",
+        "teams": [
+          {
+            "name": "Beta Team A",
+            "score": 10,
+            "players": [
+              "komanijola@gmail.com",
+              "komanieni@gmail.com",
+              "tafilaela@gmail.com",
+              "player7@test.com",
+              "player8@test.com",
+              "player9@test.com"
+            ]
+          },
+          {
+            "name": "Beta Team B",
+            "score": 2,
+            "players": [
+             "player10@test.com",
+              "player11@test.com",
+              "player12@test.com",
+              "player13@test.com",
+              "player14@test.com",
+              "player15@test.com"
+            ]
+          }
+        ]
+      },
+      {
+        "location": "Training Center",
+        "datetime": "2026-01-23T20:00:00",
+        "teams": [
+          {
+            "name": "Beta Team C",
+            "score": 10,
+            "players": [
+              "komanijola@gmail.com",
+              "komanieni@gmail.com",
+              "tafilaela@gmail.com",
+              "player7@test.com",
+              "player8@test.com",
+              "player9@test.com"
+            ]
+          },
+          {
+            "name": "Beta Team D",
+            "score": 2,
+            "players": [
+             "player10@test.com",
+              "player11@test.com",
+              "player12@test.com",
+              "player13@test.com",
+              "player14@test.com",
+              "player15@test.com"
+            ]
+          }
+        ]
+      },
+      {
+        "location": "Sports Hall",
+        "datetime": "2026-01-26T16:30:00",
+        "teams": [
+          {
+            "name": "Beta Team E",
+            "score": 10,
+            "players": [
+              "player10@test.com",
+              "player11@test.com",
+              "player12@test.com",
+              "player13@test.com",
+              "player14@test.com",
+              "player15@test.com"
+            ]
+          },
+          {
+            "name": "Beta Team F",
+            "score": 2,
+            "players": [
+              "komanieni@gmail.com",
+              "komanijola@gmail.com",
+              "tafilaela@gmail.com",
+              "player7@test.com",
+              "player8@test.com",
+              "player9@test.com"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
